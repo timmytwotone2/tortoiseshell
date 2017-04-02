@@ -1,0 +1,118 @@
+/* Global Styles */
+html{
+	font-size: 18px;
+}
+.container{
+	width:960px;
+	margin:0 auto;
+}
+.flex{
+	display:flex;
+}
+.column{
+	flex-direction: column;
+}
+/* Section main header Styles */
+.main-header{
+	background-image: url(../images/glasses-bg.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size:cover;
+	height:30rem;
+}
+.header-logo{
+	background-color:cadetblue;
+	margin-top:1rem;
+	justify-content: space-between;
+	align-items: center;
+}
+.main-logo img{
+	padding-left:2rem;
+	padding-right:1rem;
+	height:1.5rem;
+}
+.main-logo span{
+	font-family:Helvetica;
+	font-size:1rem;
+	color:white;
+	padding-top:0.2rem;
+}
+.main-menu{
+	justify-content: space-between;
+	padding-top: 1rem;
+	padding-bottom:1rem;
+	padding-right: 2rem;
+}
+.main-menu ul li{
+	padding-left: 2rem;
+}
+.main-menu ul li a{
+	color:white;
+	text-decoration: none;
+}
+.main-banner-container{
+	justify-content: flex-end;
+	position: relative;
+	right:-2rem;
+}
+.main-banner{
+	background-color:white;
+	display:inline-block;
+	position: relative;
+	top:10rem;
+	padding:1rem 5rem;
+}
+.main-banner h1{
+ 	font-family:Helvetica;
+ 	font-weight:bold;
+ 	font-size:2rem;
+}
+/* .supporting-section1 Styles */
+.supporting-section1{
+	margin-top:3rem;
+	height:8rem;
+	justify-content: center;
+}
+.paper,.ruler,.truck{
+	display:flex;
+	align-items: center;
+	margin:3rem;
+	text-align: center;
+	width:5rem;
+}
+.paper img,.ruler img,.truck img{
+	margin-bottom: 1rem;
+}
+/* .supporting-section2 styles */
+.supporting-section2{
+	margin-top:3rem;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.info{
+	width:35%;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.info p{
+	margin:1rem;
+}
+.title{
+	background-color:cadetblue;
+	font-family:Helvetica;
+	font-weight: bold;
+	font-size:1rem;
+	padding:0.5rem 1.25rem;
+	display:inline-block;
+	color:white;
+}
+/* #main-footer styles */
+#main-footer{
+	background-color:azure;
+}
+#main-footer .footer-content{
+	padding:4rem 1rem 4rem 3rem;
+}
+#main-footer .footer-content img{
+	height: 1.5rem;
+}
