@@ -25,6 +25,7 @@ html{
 	margin-top:1rem;
 	justify-content: space-between;
 	align-items: center;
+    margin-top:0;
 }
 .main-logo img{
 	padding-left:2rem;
@@ -43,6 +44,9 @@ html{
 	padding-bottom:1rem;
 	padding-right: 2rem;
 }
+.mobile-menu{
+	display:none;
+}
 .main-menu ul li{
 	padding-left: 2rem;
 }
@@ -60,17 +64,18 @@ html{
 	display:inline-block;
 	position: relative;
 	top:10rem;
-	padding:1rem 5rem;
 }
 .main-banner h1{
  	font-family:Helvetica;
  	font-weight:bold;
  	font-size:2rem;
+    padding:1rem 5rem;
 }
 /* .supporting-section1 Styles */
-.supporting-section1{
+.supporting-section1 {
 	margin-top:3rem;
-	height:8rem;
+	/*height:8rem;*/
+	display:flex;
 	justify-content: center;
 }
 .paper,.ruler,.truck{
@@ -78,7 +83,6 @@ html{
 	align-items: center;
 	margin:3rem;
 	text-align: center;
-	width:5rem;
 }
 .paper img,.ruler img,.truck img{
 	margin-bottom: 1rem;
@@ -86,17 +90,40 @@ html{
 /* .supporting-section2 styles */
 .supporting-section2{
 	margin-top:3rem;
-	justify-content: space-around;
-	align-items: flex-start;
+	/*justify-content: space-around;*/
+	justify-content: center;
+	/*align-items: flex-start;*/
+	display:flex;
 }
-.info{
+
+/*or: 
+.supporting {
+  display: flex;
+  justify-content: center;
+}*/
+
+/*.info{
 	width:35%;
 	justify-content: space-around;
 	flex-direction: column;
+}*/
+
+/*de-flexboxed info class*/
+.info {
+  width: 35%;
+  margin-right: 5%;
+  margin-bottom: 4rem;
 }
-.info p{
+
+/*.info p{
 	margin:1rem;
+}*/
+
+/*only vertical padding on the p*/
+.info p {
+  padding: 1rem 0;
 }
+
 .title{
 	background-color:cadetblue;
 	font-family:Helvetica;
@@ -105,14 +132,101 @@ html{
 	padding:0.5rem 1.25rem;
 	display:inline-block;
 	color:white;
+	max-width: 10rem;
 }
 /* #main-footer styles */
 #main-footer{
 	background-color:azure;
 }
+
 #main-footer .footer-content{
 	padding:4rem 1rem 4rem 3rem;
 }
+
 #main-footer .footer-content img{
 	height: 1.5rem;
+}
+
+/*add margins to the glasses image in footer*/
+footer img {
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+/* Responsive Styles */
+
+/*Tablet Styles */
+@media only screen and (max-width: 1024px){
+    .container{
+	width:100%;
+    }
+    .header-logo{
+        position:fixed;
+        z-index:10;
+        width:100%;
+    }
+    .main-header{
+        height:22rem;
+    }
+    .main-banner{
+        top:5rem;
+        right:2rem;
+    }
+    .main-banner h1{
+        font-size:1.33rem;
+        padding:0.75rem 4rem;
+    }
+}
+@media only screen and (max-width: 768px ){
+	.main-menu{
+		display:none;
+	}
+	.mobile-menu{
+		display:block;
+		padding:1rem 2rem;
+	}
+	.mobile-menu ul li a{
+		color:white;
+		text-decoration: none;
+	}
+	.main-header{
+		height:17rem;
+	}
+	.main-banner{
+		width:100%;
+		top:9rem;
+	}
+	.main-banner h1{
+		text-align: center;
+		padding:1rem 0;
+	}
+	.supporting-section1{
+		margin-top:3.77rem;
+	}
+	.supporting-section1 section{
+		flex-direction:column;
+	}
+	.paper span,.ruler span.truck span{
+		font-size: 0.77rem;
+	}
+	.supporting-section2{
+		flex-direction:column;
+	}
+	.info{
+		width:100%;
+	}
+	.title{
+		display:block;
+		max-width:100%;
+	}
+	.info p{
+		margin-top:1rem;
+		margin-bottom:4rem;
+	}
+	.footer-content{
+		justify-content: center;
+	}
+	.footer-content div{
+		display:none;
+	}
 }
